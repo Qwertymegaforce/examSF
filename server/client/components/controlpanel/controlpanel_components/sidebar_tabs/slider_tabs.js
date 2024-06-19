@@ -1,3 +1,8 @@
+import newUser from "../../../../static/images/sidebar_icons/newuser.svg"
+import infobook from "../../../../static/images/sidebar_icons/infobook.svg"
+import truck from "../../../../static/images/sidebar_icons/truck.svg"
+
+
 export const slidertabs_choices = {
     USERS : 'USERS',
     INFOBOOKS: "INFOBOOKS",
@@ -8,19 +13,19 @@ export const slidertabs_choices = {
 export const tabs = [
     {
         text: "Пользователи",
-        icon: "../../../../static/images/sidebar_icons/newuser.svg",
+        icon: newUser,
         gtRole: 3,
         tab: slidertabs_choices.USERS,
     },
     {
         text: "Справочники",
-        icon: "../../../../static/images/sidebar_icons/infobook.svg",
+        icon: infobook,
         gtRole: 2,
         tab: slidertabs_choices.INFOBOOKS
     },
     {
         text: "Машины",
-        icon: "../../../../static/images/sidebar_icons/truck.svg",
+        icon: truck,
         gtRole: 2,
         tab: slidertabs_choices.TRUCKS
     }

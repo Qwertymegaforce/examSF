@@ -24,7 +24,6 @@ const MasterEdit = () => {
 
     React.useEffect(()=> 
     {
-        console.log('Запуск');
         if(checkRedirect.current)
         {
             if(redirectCheck(params.details, token, role))

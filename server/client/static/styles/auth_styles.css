@@ -1,0 +1,248 @@
+@keyframes appear-from-rightside {
+    0% {
+        opacity: 0;
+        height: 0%;
+        transform: translateX(130%);
+    }
+
+    100%{
+        height: 90%;
+        opacity: 1;
+        transform: translateX(30%);
+    }
+}
+
+@keyframes appear-from-leftside {
+    0% {
+        opacity: 0;
+        transform: translateX(-130%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(-30%);
+    }
+}
+
+.auth_component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px 30px;
+    position: relative;
+}
+
+
+.auth_decor_div{
+    transform: translateX(30%);
+    z-index: -2;
+    height: 90%;
+    width: 350px;
+    background: rgb(235,230,214);
+    background: linear-gradient(153deg, rgba(235,230,214,1) 12%, rgba(22,62,108,1) 72%);
+    position: absolute;
+    border-radius: 5px;
+    animation: appear-from-rightside 0.5s ease-in-out; 
+}
+
+.auth_form_div{
+    border-radius: 5px;
+    position: absolute;
+    transform: translateX(-30%);
+    min-height: 60%;
+    width: 350px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.231);
+    animation: appear-from-leftside 0.5s ease-in-out; 
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+.auth_inputs_div{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.auth_button_div p{
+    font-family: "AstraItallic";
+    font-size: 0.6rem;
+}
+
+.auth_button_div button{
+    background-color: var(--blue-color);
+    width: 100%;
+    padding: 12px 0px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    font-family: "AstraBold";
+    margin-bottom: 5px;
+    transition: 0.2s ease-in-out;
+    &:hover{
+        color: var(--blue-color);
+        background-color: rgb(237, 248, 255);
+    }
+}
+
+.auth_form_div h1{
+    font-size: 1.5rem;
+}
+
+
+.auth_inputs_div input{
+    border: 1px solid rgb(11, 11, 11);
+    padding: 10px 7px;
+    font-size: 1rem;
+
+    &:focus{
+        outline: none;
+    }
+
+    &:focus::placeholder{
+        color: transparent;
+    }
+}
+
+
+.auth_inputs_div input::placeholder{
+    position: absolute;
+    bottom: 5px;
+    color: rgb(11, 11, 11);
+    font-size: 1rem;
+}
+
+
+@media screen and (max-width: 830px) {
+    .auth_decor_div{
+        height: 85%;
+        width: 300px;
+    }
+
+    @keyframes appear-from-rightside {
+        0% {
+            opacity: 0;
+            height: 0%;
+            transform: translateX(130%);
+        }
+    
+        100%{
+            height: 85%;
+            opacity: 1;
+            transform: translateX(30%);
+        }
+    }
+
+    .auth_form_div{
+        width: 300px;
+        height: 55%;
+
+        & h1 {
+            font-size: 1.2rem;
+        }
+
+        & .auth_inputs_div {
+            gap: 0.5rem;
+
+            & .master_input {
+                padding: 7px;
+
+                &::placeholder {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        & .incorrect_sign{
+            font-size: 0.8rem;
+        }
+
+        & .auth_button_div{
+            & button {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    @keyframes appear-from-rightside {
+        0% {
+            opacity: 0;
+            height: 0%;
+            transform: translateX(130%);
+        }
+    
+        100%{
+            height: 85%;
+            opacity: 1;
+            transform: translateX(20%);
+        }
+    }
+
+    @keyframes appear-from-leftside {
+        0% {
+            opacity: 0;
+            transform: translateX(-130%);
+        }
+    
+        100%{
+            opacity: 1;
+            transform: translateX(-18%);
+        }
+    }
+
+    .auth_decor_div{
+        transform: translateX(20%);
+    }
+
+    .auth_form_div{
+        transform: translateX(-18%);
+    }
+
+    
+}
+
+
+@media screen and (max-width: 500px) {
+
+    @keyframes appear-from-rightside {
+        0% {
+            opacity: 0;
+            height: 0%;
+            transform: translateX(130%);
+        }
+    
+        100%{
+            height: 75%;
+            opacity: 1;
+            transform: translateX(20%);
+        }
+    }
+
+    .auth_decor_div{
+        display: none;
+    }
+
+    .auth_form_div{
+        animation: none;
+        transform: none;
+    } 
+}
+
+
+@media screen and (max-width: 350px) {
+    .auth_form_div{
+        width: 250px;
+        padding: 5px 10px;
+    } 
+}
+
+

@@ -1,0 +1,132 @@
+.edit_msg_popup{
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.231);
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    & button{
+        width: 80%;
+        padding: 10px;
+    }
+}
+
+
+.master_edit{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.231);
+    border-radius: 5px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    & .date_input {
+        width: 60%;
+    }
+}
+
+.edit_buttons_div{
+    display: flex;
+    gap: 0.5rem;
+
+    & button {
+        width: calc(100% / 2);
+        padding: 7px;
+    }
+
+    & .edit_del_button {
+        background-color: var(--red-color);
+        color: white;
+        font-family: "AstraBold";
+        border: none;
+        transition: all 0.25s;
+
+        &:hover {
+            background-color: rgb(255, 218, 226);
+            color: var(--red-color);
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+
+}
+
+
+@media screen and (max-width: 545px){
+    .edit_msg_popup{
+        width: 300px;
+        height: 150px;
+    }
+
+    .master_edit {
+        padding: 20px;
+        width: 85%;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .master_edit {
+        & .date_input, .char_input, .text_input, .master_dropdown, .user_search {
+            & input, textarea {
+                font-size: 0.8rem;
+                padding: 5px;
+            }
+
+            & p {
+                font-size: 0.8rem;
+            }
+
+            & img {
+                width: 15px;
+            }
+
+            & .selected_user p{
+                font-size: 0.6rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 410px){
+    .edit_msg_popup{
+        width: 250px;
+        height: 150px;
+    }
+
+    .master_edit {
+        & .date_input,  .master_dropdown{
+           width: 80%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 370px){
+    .edit_buttons_div button{
+        font-size: 0.6rem;
+    }
+
+
+    .master_edit {
+        & .user_search {
+            & .selected_user p{
+                font-size: 0.5rem;
+            }
+        }
+    }
+}

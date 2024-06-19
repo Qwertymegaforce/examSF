@@ -1,0 +1,70 @@
+.machine_view_component, .service_view_component, .complaint_view_component{
+    padding: 0px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.infobook_info, .user_info{
+    & h1 {
+        margin-bottom: 5px;
+    }
+}
+
+
+.infobook_info_list, .user_list, .business_info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+
+.infobook_parser_component, .user_parser_component, .business_info_segment{
+    padding: 5px;
+    background-color: var(--yellow-white-color);
+    color: rgb(94, 94, 94);
+    border-radius: 5px;
+    & h2, h3{
+        color: black;
+    }
+}
+
+.user_parser_component{
+    background-color: rgb(204, 230, 250);
+}
+
+.business_info_segment{
+    background-color: rgb(250, 204, 204);
+}
+
+.machine_buttons_component{
+    display: flex;
+    gap: 1rem;
+
+    & button{
+        padding: 7px 10px;
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .infobook_info_list, .user_list, .business_info{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .machine_view_component, .service_view_component, .complaint_view_component{
+        padding: 0px 20px;
+    }
+
+    .machine_buttons_component{
+        justify-content: space-between;
+        & button{
+            width: 100%;
+            min-width: 0px;
+        }
+    }
+    
+}

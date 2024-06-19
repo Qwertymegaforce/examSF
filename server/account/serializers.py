@@ -33,7 +33,7 @@ class CustomUserSerializer(serializers.ModelSerializer):
             username=validated_data['username'],
             password=validated_data['password'],
             role=validated_data['role'],
-            first_name=validated_data['first_name'].replace(" ", "_"),
+            first_name=validated_data['first_name'],
             token=token_generator(32)
         )
         return user

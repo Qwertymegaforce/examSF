@@ -2,8 +2,10 @@
 Работа "Справочник Силант" Соломонов ЕЮ FPW140
 
 Команды для запуска. 
--> cd server \n
--> py manage.py runserver \n
+-> cd server 
+<br/>
+-> py manage.py runserver 
+<br/>
 
 Администратор (все права)
 
